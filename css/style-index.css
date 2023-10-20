@@ -38,7 +38,8 @@ h1 {
 .social-media-link img:hover {
     box-sizing: content-box;
     transform: scale(1.1);
-    box-shadow: 0 0 35px orange;
+    -webkit-filter: drop-shadow(0 0 10px #ff6600);
+    filter: drop-shadow(0 0 10px #ff6600);
 }
 
 .buttons {
@@ -64,4 +65,91 @@ h1 {
     border: 4px solid #ff6600;
     color: #ff6600;
     transform: scale(1.1);
+}
+
+.container-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.popup {
+    width: 30%;
+    height: 50%;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#contact-form {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-row {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-column {
+    display: inline-block;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-left: -10px;
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.1);
+    background-color: #ff6600;
 }

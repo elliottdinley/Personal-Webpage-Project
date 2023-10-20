@@ -1,14 +1,30 @@
-function playPianoAudio(note) {
-    var audio = new Audio(note);
-    audio.play();
+function openPopup(x) {
+    let modal = document.querySelector("#popup-container");
+    let modal_content = document.querySelector("#popup-content");
+
+    modal.style.display = "block";
+    setTimeout(function() {
+        modal.style.opacity = 1;
+    }, 300);
+
+    modal_content.style.opacity = 1;
 }
 
-var letterElements = document.querySelectorAll('.letter');
-letterElements.forEach(function(letter) {
-    var note = letter.getAttribute('data-note');
-    letter.addEventListener('mouseover', function() {
-        if (note) {
-            playPianoAudio("sounds/" + note);
-        }
-    });
-});
+function closePopup() {
+    let modal = document.getElementById("popup-container");
+    let modalContent = document.getElementById("popup-content");
+
+    modal.style.opacity = 0;
+    modalContent.style.opacity = 0;
+
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 300);
+}
+
+function contactSend() {
+    let contact_form = document.querySelector("#contact-form")
+    if (contact_form.checkValidity()) {
+        alert("This doesn't actually work...")
+    }
+}

@@ -10,14 +10,40 @@
     <div class="title-container">
         <h1>I'm Elliott Dinley</h1>
         <div class="social-media-links">
-            <a class="social-media-link" href="#"><img src="images/github.png" alt="Github"></a>
-            <a class="social-media-link" href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-            <a class="social-media-link" href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a class="social-media-link" href="https://github.com/elliottdinley/" target="_blank"><img src="images/github.png" alt="Github"></a>
+            <a class="social-media-link" href="https://www.linkedin.com/in/elliottdinley/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a class="social-media-link" href="https://www.instagram.com/elliottdinley/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
         </div>
         <div class="buttons">
-            <a class="button" href="#">Portfolio</a>
-            <a class="button" href="#">Contact</a>
+            <a class="button" href="pdf/cv-template.pdf" target="_blank">CV</a>
+            <a class="button" href="#" onclick="openPopup()">Contact</a>
         </div>
     </div>
+
+    <div class="container-popup" id="popup-container">
+        <div class="popup" id="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            
+            <form id="contact-form">
+                <h2>Contact</h2>
+                <div class="form-row">
+                    <div class="form-column">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-column">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <textarea id="message" name="message" rows="10" placeholder="Message" required></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" onclick="contactSend()">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
